@@ -1,0 +1,81 @@
+.contact__bckg {
+  height: 450px;
+}
+
+.contact__header {
+  &__h1 {
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 800px;
+  }
+
+  &__bar {
+    height: 10px;
+    width: 200px;
+    background-color: #27C5A9;
+  }
+}
+
+.contact__box-left__form{
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  &__name{
+    width: 70%;
+    height: 50px;
+    border: none;
+    border: 1px solid #27C5A9;
+    margin-top: 20px;
+  }
+  &__email{
+    width: 70%;
+    height: 50px;
+    border: none;
+    border: 1px solid #27C5A9;
+  }
+  &__text{
+    width: 70%;
+    height: 150px;
+    resize: none;
+    border: none;
+    border: 1px solid #27C5A9;
+}
+}
+
+.contact__box-right{
+  &__img{
+  height: 210px;
+  background-image: url(../images/red_chair.png);
+  background-repeat: no-repeat;
+
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: grey;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  &__checkbox_checked{
+    border: none;
+  }
+
+  &__submit{
+    border: none;
+    background-color: none;
+    height: 40px;
+    width: 100%;
+    background-color: #27C5A9;
+    color:white;
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+  }
+}

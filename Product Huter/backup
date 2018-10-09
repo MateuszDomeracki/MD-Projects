@@ -1,0 +1,126 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {HashRouter, Route, Link, Switch, NavLink} from 'react-router-dom';
+
+
+
+class Location extends React.Component {
+
+  constructor() {
+    super();
+    const arr = [];
+    for (let i = 0; i < 20; i++) {
+        const latitude = (Math.random() * (52.260836 - 52.207850 )) + 52.207850;
+        const longitude = (Math.random() * (21.109543- 20.933762 )) + 20.933762;
+      arr.push([latitude, longitude]);
+    }
+this.state = {
+  visibility: "none",
+  data: arr
+  }
+}
+
+  showMap =() =>{
+    this.setState ({
+      visibility: "block"
+    })
+  }
+
+  anotherRandom =() =>{
+
+      const arr = [];
+      for (let i = 0; i < 20; i++) {
+          const latitude = (Math.random() * (52.260836 - 52.207850 )) + 52.207850;
+          const longitude = (Math.random() * (21.109543- 20.933762 )) + 20.933762;
+        arr.push([latitude, longitude]);
+      }
+      this.setState ({
+        data: arr
+      })
+
+
+          // The location of Uluru
+          var uluru = {
+            lat: 52.232879,
+            lng: 21.004829
+          };
+          // The map, centered at Uluru
+          var map = new google.maps.Map(this.map, {
+            zoom: 12,
+            center: uluru
+          });
+          // The marker, positioned at Uluru
+
+          this.state.data.forEach((e,i) => {
+
+            let pos = {
+              lat: e[0],
+              lng: e[1]
+            }
+
+            let marker = new google.maps.Marker({position: pos, map: map});
+
+
+          })
+  }
+
+  render() {
+
+        const style = { height : 600,
+                        width: 600,
+                        display: this.state.visibility
+                       }
+
+
+    return <div>
+          <button onClick = {this.showMap}>Random location</button>
+          <button onClick = {this.anotherRandom}>Random location</button>
+          <div style={style} ref={map => this.map = map}></div>
+    </div>
+  }
+
+  componentDidMount() {
+
+
+    // The location of Uluru
+    var uluru = {
+      lat: 52.232879,
+      lng: 21.004829
+    };
+    // The map, centered at Uluru
+    var map = new google.maps.Map(this.map, {
+      zoom: 12,
+      center: uluru
+    });
+    // The marker, positioned at Uluru
+
+    this.state.data.forEach((e,i) => {
+
+      let pos = {
+        lat: e[0],
+        lng: e[1]
+      }
+
+      let marker = new google.maps.Marker({position: pos, map: map});
+
+
+    })
+
+
+  }
+
+}
+
+class App extends React.Component {
+
+  render() {
+    return <div>
+      <Location/>
+    </div>
+
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  ReactDOM.render(<App/>, document.getElementById('app'));
+});

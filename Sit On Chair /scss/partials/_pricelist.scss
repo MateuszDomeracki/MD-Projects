@@ -1,0 +1,178 @@
+
+.priceList__bckg{
+  background-color: rgba(223,223,223, 0.4);
+  height: 700px
+}
+
+.priceList__header{
+  &__h1{
+  text-transform: uppercase;
+
+  }
+  &__bar{
+    height: 10px;
+    width:200px;
+    background-color: #27C5A9
+  }
+    }
+
+.priceList__box{
+  height: 500px;
+  background-color: white;
+  margin:15px;
+  border:1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &__h1{
+    text-transform: uppercase;
+    color:#27C5A9;
+  }
+  &__circle{
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    &__val{
+      font-size: 55px;
+    }
+    & sup{
+        font-size: 30%;
+        position: relative;
+        top:-20px;
+    }
+    &__cur{
+      font-size: 1.25em;
+      text-transform: uppercase;
+    }
+  }
+  &__option{
+    width: 98%;
+    height: 120px;
+    color:grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__h1{
+      width: 100%;
+     background-color: #e5e5e5;
+     text-align: center;
+     font-weight: 400;
+    }
+    &__h2{
+      width: 100%;
+     background-color: #f2f2f2;
+     text-align: center;
+     font-weight: 400;
+    }
+    &__h3{
+      width: 100%;
+     background-color: #e5e5e5;
+     text-align: center;
+     font-weight: 400;
+    }
+    &__h4{
+      width: 100%;
+     background-color: #f2f2f2;
+     text-align: center;
+     font-weight: 400;
+    }
+  }
+  &__button{
+    height: 40px;
+    width: 150px;
+    background-color: #27C5A9;
+    color:white;
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+}
+
+.priceList__boxm{
+  height: 500px;
+  background-color: #27C5A9;
+  margin:15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &__h1{
+    text-transform: uppercase;
+    color: white;
+  }
+  &__circle{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #27C5A9;
+    &__val{
+      font-size: 60px;
+    }
+    & sup{
+        font-size: 30%;
+        position: relative;
+        top:-20px;
+    }
+    &__cur{
+      font-size: 1.25em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__button{
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color:#27C5A9;
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  &__option{
+    width: 98%;
+    height: 120px;
+    background-color:#27C5A9 ;
+    color: grey;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__h1{
+      width: 100%;
+     background-color: white;
+     text-align: center;
+    font-weight: 400;
+    }
+    &__h2{
+      width: 100%;
+     background-color: #f2f2f2;
+     text-align: center;
+       font-weight: 400;
+    }
+    &__h3{
+      width: 100%;
+     background-color: white;
+     text-align: center;
+    font-weight: 400;
+    }
+    }
+  }

@@ -1,0 +1,22 @@
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  .row {
+    margin: 20px 0;
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        padding: 0 00px;
+        min-height: 1px;
+        margin: 0px 0;
+        width: (100% / 12) * $i;
+        float: left;
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
