@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.nasa-welcome{
+  height: 100vh;
+  background: url('../earth-space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment:fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nasa-welcome h1{
+  font-size: 100px;
+  color: white;
+}
+
+.nasa-gallery{
+  min-height: 100vh;
+  background: #01133B;
+}
+
+.gallery{
+  margin: 0 auto ;
+  padding: 0;
+  list-style: none;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.gallery-element{
+  flex-basis: 33.3333%;
+  padding: 2px;
+}
+
+.gallery-link{
+  display: block;
+  padding-top: 56.25%;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.gallery-footer{
+  text-align: center;
+  padding: 50px;
+}
+
+.gallery-load-more{
+  border: 3px solid white;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 20px 40px;
+  border-radius: 60px;
+}
